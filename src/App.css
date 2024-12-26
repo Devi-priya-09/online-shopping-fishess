@@ -1,38 +1,315 @@
-.App {
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header{
+  background-image: url('./Components/images/back1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  text-align: center;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 30px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  background-image: url('./Components/images/tankne.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+/* Main Content Styling */
+.order {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.order h1 {
+  font-size: 2.5rem;
+  animation: fadeIn 1.5s ease-in-out;
+  color: #ff5722;
+  text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between; /* Adjust spacing between images */
+  align-items: center; /* Align images vertically */
+  gap: 20px; /* Add a gap between the image divs */
+  padding: 20px; /* Add padding around the container */
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.image-container div {
+  flex: 1; /* Makes each image take up equal width */
+  text-align: center; /* Center-aligns the images */
+}
+
+.image-container img {
+  max-width: 100%; /* Ensures the images are responsive */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for better design */
+  transition: transform 0.3s ease; /* Adds hover animation */
+}
+
+.image-container img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.image-containerr {
+  display: flex;
+  flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+  justify-content: center; /* Centers the images */
+  gap: 20px; /* Space between the images */
+  padding: 20px; /* Adds padding around the container */
+}
+
+.image-containerr div {
+  position: relative;
+  flex: 1 1 calc(25% - 40px); /* Responsive width with some space */
+  max-width: 250px; /* Optional max-width for each image */
+  overflow: hidden; /* Ensures animations don't overflow */
+  text-align: center;
+  cursor: pointer; /* Indicates interactivity */
+}
+
+.image-containerr img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-containerr img:hover {
+  transform: scale(1.1); /* Zooms in slightly on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhances shadow */
+}
+
+/* Individual Animations */
+.image-containerr div:nth-child(1) img:hover {
+  transform: rotate(10deg) scale(1.1); /* Slight rotation and zoom */
+}
+
+.image-containerr div:nth-child(2) img:hover {
+  transform: translateY(-10px) scale(1.1); /* Slides up and zooms */
+}
+
+.image-containerr div:nth-child(3) img:hover {
+  transform: skewX(10deg) scale(1.1); /* Skews and zooms */
+}
+
+.image-containerr div:nth-child(4) img:hover {
+  transform: rotateY(180deg) scale(1.1); /* Flips horizontally and zooms */
+}
+
+/* Styles for the image container */
+div img {
+  width: 100%; /* Responsive width */
+  max-width: 1100px;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Initial shadow */
+}
+
+/* Animation on hover */
+div img:hover {
+  transform: scale(1.1); /* Slight zoom-in effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Footer Container */
+.footer-container {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 15px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+/* Footer Content Sections */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Footer Section Titles */
+.footer-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  position: relative;
+  color: #ecf0f1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Section Paragraph */
+.footer-section p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Quick Links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ecf0f1;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+  color: #1abc9c; /* Green highlight */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #34495e;
+}
+
+/* Hover Animation */
+.footer-section h3:hover {
+  color: #1abc9c;
+  transform: translateY(-5px);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section {
+    margin: 15px 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 480px) {
+  .footer-section h3 {
+    font-size: 1.3em;
   }
-  to {
-    transform: rotate(360deg);
+  .footer-section p, .footer-section ul li {
+    font-size: 0.9em;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  div img {
+    max-width: 90%; /* Reduce image size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  div img {
+    max-width: 100%; /* Full width for very small screens */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-containerr div {
+    flex: 1 1 calc(50% - 20px); /* Two images per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-containerr div {
+    flex: 1 1 100%; /* One image per row */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+
+  .order h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 1rem;
+  }
+
+  .order h1 {
+    font-size: 1.8rem;
   }
 }

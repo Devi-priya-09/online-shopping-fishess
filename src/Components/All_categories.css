@@ -1,0 +1,27 @@
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between images */
+    align-items: center; /* Align images vertically */
+    gap: 20px; /* Add a gap between the image divs */
+    padding: 20px; /* Add padding around the container */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  }
+  
+  .image-container div {
+    flex: 1; /* Makes each image take up equal width */
+    text-align: center; /* Center-aligns the images */
+  }
+  
+  .image-container img {
+    max-width: 100%; /* Ensures the images are responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for better design */
+    transition: transform 0.3s ease; /* Adds hover animation */
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  

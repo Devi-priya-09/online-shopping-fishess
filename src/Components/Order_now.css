@@ -1,0 +1,126 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #eaf4fc; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .order-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .order-container {
+    background: #ffffff; /* White background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeInUp 1s ease-out; /* Animation */
+  }
+
+  /* Title Styling */
+  .order-title {
+    font-size: 1.8rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Form Styling */
+  .order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 5px;
+    background: #f9f9f9; /* Light background */
+    color: #333333;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #007bff; /* Blue border on focus */
+  }
+
+  /* Button Styling */
+  .order-btn {
+    background: #007bff; /* Solid blue button */
+    color: #ffffff; /* White text */
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: bounce 0.5s infinite alternate; /* Button animation */
+  }
+
+  .order-btn:hover {
+    background: #0056b3; /* Darker blue on hover */
+  }
+
+  /* Animation Keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .order-container {
+      padding: 1.5rem;
+      width: 95%;
+    }
+
+    .order-title {
+      font-size: 1.5rem;
+    }
+
+    .order-btn {
+      font-size: 0.9rem;
+      padding: 0.6rem;
+    }
+  }
